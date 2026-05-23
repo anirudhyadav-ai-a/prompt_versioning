@@ -140,14 +140,26 @@ Use these templates:
 
 ## Acknowledgements
 
-Implementation scaffolding was generated with [Devin](https://devin.ai); architecture, technical content, and design decisions are the author's own.
+Implementation scaffolding was generated with using Claude and Devinai; architecture, technical content, and design decisions are the author's own.
 
 ---
 
 ## License
 
-This whitepaper and companion code are provided under the [MIT License](../LICENSE).
+License
+Free to Use — With Eyes Open
+Copyright (c) 2026 Anirudh Yadav
+
+You are free to use, copy, adapt, remix, and build on anything in this repository — for personal projects, your own whitepapers, your team's workflows, or anything else you can think of. No permission needed. No strings attached.
+If something here helps you, great. If you improve on it, even better — sharing back is appreciated but never required.
+
+The Part You Should Actually Read
+This repository — the playbook, the code, the scripts, the examples, the diagrams, the PDF, the Word documents — is provided as-is, based on what worked for one person in one context. If you run a script and something breaks, that's on you to debug. 
+In plain terms: use good judgment, test before you publish, verify before you cite, and don't hold this repo responsible for outcomes in your project.
+I will be happy to hear feedback, fix genuine errors, and improve the material — but accepts no liability for how it is used.
+
+Happy Coding.
 
 ---
 
-Feedback and corrections are welcome — [open an issue](https://github.com/anirudhyadav/whitepaper/issues) or connect on [LinkedIn](https://linkedin.com/in/anirudhyadav).
+Feedback and corrections are welcome
