@@ -1,0 +1,47 @@
+{
+  "name": "prompt-versioning",
+  "displayName": "Prompt Versioning — Prompt Lifecycle Manager",
+  "description": "Register, version, drift-detect, and A/B test prompts with native GitHub Copilot.",
+  "version": "0.1.0",
+  "publisher": "whitepaper",
+  "engines": { "vscode": "^1.93.0" },
+  "categories": ["AI", "Machine Learning"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "chatParticipants": [
+      {
+        "id": "prompts.assistant",
+        "fullName": "Prompt Versioning",
+        "name": "prompts",
+        "description": "Register, version, detect drift, and A/B test prompts",
+        "isSticky": true,
+        "commands": [
+          { "name": "register", "description": "Register prompts found in code" },
+          { "name": "drift", "description": "Check for prompt drift" },
+          { "name": "test", "description": "Design A/B test for prompts" }
+        ]
+      }
+    ],
+    "commands": [
+      { "command": "prompts.register", "title": "Prompts: Register from Code" },
+      { "command": "prompts.drift", "title": "Prompts: Drift Detection" },
+      { "command": "prompts.test", "title": "Prompts: Design A/B Test" }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "lint": "eslint src --ext ts",
+    "test": "jest --passWithNoTests"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.93.0",
+    "@types/jest": "^29.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.4.0"
+  }
+}

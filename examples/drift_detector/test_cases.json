@@ -1,0 +1,14 @@
+[
+  {"input": "Hello there!", "expected": "greeting"},
+  {"input": "What are your hours?", "expected": "question"},
+  {"input": "This product is terrible", "expected": "complaint"},
+  {"input": "I love your service", "expected": "feedback"},
+  {"input": "I need to speak with a manager immediately", "expected": "escalation"},
+  {"input": "Can you help me find a product?", "expected": "question"},
+  {"input": "Hi, how are you doing today?", "expected": "greeting"},
+  {"input": "Your website keeps crashing and I've lost my order", "expected": "complaint"},
+  {"input": "The new feature you added is fantastic", "expected": "feedback"},
+  {"input": "This is unacceptable, I want a full refund now", "expected": "escalation"},
+  {"input": "What's the return policy?", "expected": "question"},
+  {"input": "Good morning!", "expected": "greeting"}
+]

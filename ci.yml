@@ -1,0 +1,36 @@
+# CI workflow for prompt_versioning — copy to .github/workflows/prompt_versioning-ci.yml to activate
+# Run: triggered on push/PR touching prompt_versioning/**
+name: CI — prompt_versioning
+
+on:
+  push:
+    paths: ["prompt_versioning/**"]
+  pull_request:
+    paths: ["prompt_versioning/**"]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -e ".[all]"
+      - run: pytest prompt_versioning/ -v --tb=short
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install ruff black
+      - run: ruff check prompt_versioning/
+      - run: black --check prompt_versioning/

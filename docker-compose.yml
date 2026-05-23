@@ -1,0 +1,10 @@
+# prompt_versioning — local dev stack
+# Deps: app only (in-memory prompt registry, no external services)
+# Run: docker-compose up
+services:
+  app:
+    build: .
+    volumes: [".:/app"]
+    env_file: ["../.env"]
+    environment:
+      - APP_ENV=development
